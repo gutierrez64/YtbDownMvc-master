@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Download de Vídeo ou Áudio";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        * {
+            font-family: Helvetica;
+            padding: 0;
+            margin: 0;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #171717;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            background-image: url("http://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+        }
+
+        .ads {
+            padding: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input[type="url"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        } 
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff1f1f
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Download de Vídeo ou Áudio</h1>
+
+    <form asp-action="Baixar" method="post">
+        <label for="videoUrl">URL do Vídeo:</label>
+        <input type="url" name="videoUrl" required />
+
+        <label for="downloadDirectory">Diretório de Download:</label>
+        <select name="downloadDirectory">
+            <option value="BaixarVideo">Baixar Vídeo</option>
+            <option value="BaixarAudio">Baixar Áudio</option>
+        </select>
+
+        <button type="submit">Baixar</button>
+    </form>
+    <div class="ads">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8797446406547401"
+            crossorigin="anonymous"></script>
+        <!-- baixar video -->
+        <ins class="adsbygoogle"
+            style="display:block;background-color:#ccc"
+            data-ad-client="ca-pub-8797446406547401"
+            data-ad-slot="5512877327"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</body>
+</html>
